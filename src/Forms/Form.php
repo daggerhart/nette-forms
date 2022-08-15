@@ -164,7 +164,7 @@ class Form extends Container implements Nette\HtmlStringable
 	 */
 	public function setAction($url)
 	{
-		$this->getElementPrototype()->action = $url;
+		$this->getElementPrototype()->action = new FormActionString((string) $url);
 		return $this;
 	}
 
