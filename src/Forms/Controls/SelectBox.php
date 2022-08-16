@@ -103,7 +103,7 @@ class SelectBox extends ChoiceControl
 			[
 				'disabled:' => is_array($this->disabled) ? $this->disabled : null,
 			] + $this->optionAttributes,
-			$this->value
+			$this->value,
 		)->addAttributes(parent::getControl()->attrs);
 	}
 

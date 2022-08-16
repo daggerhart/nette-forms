@@ -233,7 +233,7 @@ class Rules implements \IteratorAggregate
 				$toggles = $rule->branch->getToggleStates(
 					$toggles,
 					$success && static::validateRule($rule),
-					$rule->validator === Form::BLANK ? false : $emptyOptional
+					$rule->validator === Form::BLANK ? false : $emptyOptional,
 				);
 			} elseif (!$emptyOptional || $rule->validator === Form::FILLED) {
 				$success = $success && static::validateRule($rule);
